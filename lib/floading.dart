@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 /// 便捷的创建 loading，支持设置全局样式，也支持设置单次样式。能够自动消失。
 ///
