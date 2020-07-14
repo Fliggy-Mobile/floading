@@ -13,7 +13,7 @@
 
 <p>Easily create and manage Loading, support global customization and one-time customization, support timing disappear.</p>
 
-<p><strong>Author：<a href="https://github.com/chenBingX">Newton</a>(<a href="coorchice.cb@alibaba-inc.com">coorchice.cb@alibaba-inc.com</a>)</strong></p>
+<p><strong>Author：<a href="">Changyi</a>(<a href="fupeng.fp@alibaba-inc.com">fupeng.fp@alibaba-inc.com</a>)</strong></p>
 
 <p>
 

@@ -13,7 +13,7 @@
 
 <p>轻松创建和管理 Loading，支持全局自定义和单次自定义，支持定时消失。</p>
 
-<p><strong>主理人：<a href="https://github.com/chenBingX">纽特</a>(<a href="coorchice.cb@alibaba-inc.com">coorchice.cb@alibaba-inc.com</a>)</strong></p>
+<p><strong>主理人：<a href="">昌易</a>(<a href="fupeng.fp@alibaba-inc.com">fupeng.fp@alibaba-inc.com</a>)</strong></p>
 
 <p>
 
