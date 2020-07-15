@@ -1,7 +1,7 @@
 name: floading
 description: Help developers create and use Loading in the most convenient way.
 version: 1.0.0
-author: CoorChice<coorchice.cb@alibaba-inc.com>
+author: Changyi<fupeng.fp@alibaba-inc.com>
 homepage: https://github.com/Fliggy-Mobile/floading
 
 environment:

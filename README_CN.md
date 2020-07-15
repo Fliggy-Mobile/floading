@@ -65,7 +65,7 @@
 
 # 🛠 使用指南
 
-## 显示/隐藏
+## 🌈 显示/隐藏
 
 ![](https://gw.alicdn.com/tfs/TB1PN_dbwgP7K4jSZFqXXamhVXa-720-449.gif)
 
@@ -86,7 +86,7 @@ FLoading.hide();
 通过  **FLoading**  来实现  **Loading**  的 **显示/隐藏** ，真是太简单了。
 
 
-## 自定义样式
+## 💎 自定义样式
 
 ![](https://gw.alicdn.com/tfs/TB1cZHVpcKfxu4jSZPfXXb3dXXa-750-468.gif)
 
@@ -122,7 +122,7 @@ FLoading.show(context,
   ));
 ```
 
-## 定时隐藏和背景颜色
+## 🛰 定时隐藏和背景颜色
 
 ![](https://gw.alicdn.com/tfs/TB1LAuKaOpE_u4jSZKbXXbCUVXa-750-468.gif)
 

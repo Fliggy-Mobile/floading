@@ -64,7 +64,7 @@
 
 # 🛠 Guide
 
-## Show/hide
+## 🌈 Show/hide
 
 ![](https://gw.alicdn.com/tfs/TB1PN_dbwgP7K4jSZFqXXamhVXa-720-449.gif)
 
@@ -85,7 +85,7 @@ FLoading.hide();
 It's too simple to implement **Show/Hide** of **Loading** through **FLoading**.
 
 
-## Custom style
+## 💎 Custom style
 
 ![](https://gw.alicdn.com/tfs/TB1cZHVpcKfxu4jSZPfXXb3dXXa-750-468.gif)
 
@@ -121,7 +121,7 @@ FLoading.show(context,
   ));
 ```
 
-## Timed hiding and background color
+## 🛰 Timed hiding and background color
 
 ![](https://gw.alicdn.com/tfs/TB1LAuKaOpE_u4jSZKbXXbCUVXa-750-468.gif)
 
@@ -157,7 +157,7 @@ dependencies:
   floading: ^<version number>
 ```
 
-> ⚠️ Attention，please go to [**pub**] (https://pub.dev/packages/floading) to get the latest version number of **FSearch**
+> ⚠️ Attention，please go to [**pub**] (https://pub.dev/packages/floading) to get the latest version number of **FLoading**
 
 ## 🖥 Git dependency
 
@@ -169,7 +169,7 @@ dependencies:
       ref: '<Branch number or tag number>'
 ```
 
-> ⚠️ Attention，please refer to [**FSearch**] (https://github.com/Fliggy-Mobile/floading) official project for branch number or tag.
+> ⚠️ Attention，please refer to [**FLoading**] (https://github.com/Fliggy-Mobile/floading) official project for branch number or tag.
 
 
 # 💡 License
