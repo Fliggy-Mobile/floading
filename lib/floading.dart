@@ -46,12 +46,11 @@ class FLoading {
       {Widget loading, int duration, Color color, bool closable = false}) {
     if (!_isShow) {
       _isShow = true;
-      showDialog(
-          barrierColor: color ?? _backgroundColor,
-          barrierDismissible: false,
-          useSafeArea: false,
-          context: context,
-          builder: (context) {
+      showGeneralDialog(
+        context: context,
+        pageBuilder: (BuildContext buildContext, Animation<double> animation,
+            Animation<double> secondaryAnimation) {
+          final Widget pageChild = Builder(builder: (context) {
             _cacheContext = context;
             Widget widget = loading ?? _loading ?? CupertinoActivityIndicator();
             return WillPopScope(
@@ -68,8 +67,28 @@ class FLoading {
               ),
             );
           });
+          return pageChild;
+        },
+        barrierDismissible: false,
+        barrierLabel:
+            MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        barrierColor: color ?? _backgroundColor,
+        transitionDuration: const Duration(milliseconds: 150),
+        transitionBuilder: (BuildContext context, Animation<double> animation,
+            Animation<double> secondaryAnimation, Widget child) {
+          return FadeTransition(
+            opacity: CurvedAnimation(
+              parent: animation,
+              curve: Curves.easeOut,
+            ),
+            child: child,
+          );
+        },
+        useRootNavigator: true,
+        routeSettings: null,
+      );
       if (duration != null) {
-       _timer = Timer(Duration(milliseconds: duration), () {
+        _timer = Timer(Duration(milliseconds: duration), () {
           hide();
         });
       }
