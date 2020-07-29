@@ -12,6 +12,8 @@ class FLoading {
   static Widget _loading;
   static Color _backgroundColor;
 
+  static Timer _timer;
+
   /// 是否正在显示 loading
   ///
   /// Whether loading is being displayed
@@ -25,7 +27,7 @@ class FLoading {
   static init(Widget widget, {Color backgroundColor}) {
     _loading = widget;
     if (backgroundColor != null) {
-        _backgroundColor = backgroundColor;
+      _backgroundColor = backgroundColor;
     }
   }
 
@@ -33,13 +35,15 @@ class FLoading {
   /// [loading] - 自定义的 Loading 视图
   /// [duration] - 指定毫秒后，自动隐藏。如果为 null，则不自动隐藏
   /// [color] - loading 时的背景颜色，默认为 [Colors.black54]
+  /// [closable] - 是否可以通过返回按钮关闭 loading
   ///
   /// Display Loading
   /// [loading]-custom loading view
   /// [duration]-automatically hide after specified milliseconds. If null, do not hide automatically
   /// [color]-background color when loading, default is [Colors.black54]
+  /// [closable]-Is it possible to close loading via the back button
   static show(BuildContext context,
-      {Widget loading, int duration, Color color}) {
+      {Widget loading, int duration, Color color, bool closable = false}) {
     if (!_isShow) {
       _isShow = true;
       showDialog(
@@ -50,13 +54,22 @@ class FLoading {
           builder: (context) {
             _cacheContext = context;
             Widget widget = loading ?? _loading ?? CupertinoActivityIndicator();
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [widget],
+            return WillPopScope(
+              onWillPop: () async {
+                if (closable) {
+                  _timer.cancel();
+                  hide();
+                }
+                return Future.value(false);
+              },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [widget],
+              ),
             );
           });
       if (duration != null) {
-        Timer(Duration(milliseconds: duration), () {
+       _timer = Timer(Duration(milliseconds: duration), () {
           hide();
         });
       }

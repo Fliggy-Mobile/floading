@@ -48,6 +48,8 @@
 
 </div>
 
+![](https://gw.alicdn.com/tfs/TB1XHHyf8Bh1e4jSZFhXXcC9VXa-1462-552.png)
+
 
 **[English](https://github.com/Fliggy-Mobile/floading) | 简体中文**
 
@@ -64,6 +66,18 @@
 - 支持局部和全局自定义样式
 
 # 🛠 使用指南
+
+## 参数说明
+
+```dart
+  /// 显示 Loading
+  /// [loading] - 自定义的 Loading 视图
+  /// [duration] - 指定毫秒后，自动隐藏。如果为 null，则不自动隐藏
+  /// [color] - loading 时的背景颜色，默认为 [Colors.black54]
+  /// [closable] - 是否可以通过返回按钮关闭 loading
+  static show(BuildContext context,
+      {Widget loading, int duration, Color color, bool closable = false})
+```
 
 ## 🌈 显示/隐藏
 

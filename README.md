@@ -48,6 +48,8 @@
 
 </div>
 
+![](https://gw.alicdn.com/tfs/TB1XHHyf8Bh1e4jSZFhXXcC9VXa-1462-552.png)
+
 **English | [简体中文](https://github.com/Fliggy-Mobile/floading/blob/master/README_CN.md)**
 
 > Like it? Please cast your **Star**  🥰 ！
@@ -63,6 +65,18 @@
 - Support local and global custom styles
 
 # 🛠 Guide
+
+## Parameter
+
+```dart
+  /// Display Loading
+  /// [loading]-custom loading view
+  /// [duration]-automatically hide after specified milliseconds. If null, do not hide automatically
+  /// [color]-background color when loading, default is [Colors.black54]
+  /// [closable]-Is it possible to close loading via the back button
+  static show(BuildContext context,
+      {Widget loading, int duration, Color color, bool closable = false})
+```
 
 ## 🌈 Show/hide
 
