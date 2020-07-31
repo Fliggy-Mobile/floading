@@ -1,3 +1,7 @@
+## 1.0.2 
+
+- Fix the hiding problem of `FLoading.hide()`
+
 ## 1.0.1
 
 - Adaptation **1.17**

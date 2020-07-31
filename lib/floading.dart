@@ -56,7 +56,6 @@ class FLoading {
             return WillPopScope(
               onWillPop: () async {
                 if (closable) {
-                  _timer.cancel();
                   hide();
                 }
                 return Future.value(false);
@@ -95,10 +94,17 @@ class FLoading {
     }
   }
 
-  /// 隐藏 loading
+  /// 隐藏 loading。
+  /// [context] 有时，开发者可能需要自行传入当前 [context]。
   ///
   /// Hide loading
-  static hide() {
+  /// [context] Sometimes, developers may need to pass in the current [context] by themselves.
+  static hide({BuildContext context}) {
+    _timer?.cancel();
+    _timer = null;
+    if(context != null){
+      _cacheContext = context;
+    }
     if (_isShow && _cacheContext != null) {
       _isShow = false;
       Navigator.pop(_cacheContext);

@@ -76,6 +76,14 @@
   /// [closable]-Is it possible to close loading via the back button
   static show(BuildContext context,
       {Widget loading, int duration, Color color, bool closable = false})
+
+
+  /// 隐藏 loading。
+  /// [context] 有时，开发者可能需要自行传入当前 [context]。
+  ///
+  /// Hide loading
+  /// [context] Sometimes, developers may need to pass in the current [context] by themselves.
+  static hide({BuildContext context})
 ```
 
 ## 🌈 Show/hide
