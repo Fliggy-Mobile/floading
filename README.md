@@ -18,7 +18,7 @@
 <p>
 
 <a href="https://pub.dev/packages/floading#-readme-tab-">
-    <img height="20" src="https://img.shields.io/badge/Version-1.0.0-important.svg">
+    <img height="20" src="https://img.shields.io/badge/Version-2.0.0-important.svg">
 </a>
 
 
@@ -106,12 +106,12 @@ FLoading.hide();
 
 It's too simple to implement **Show/Hide** of **Loading** through **FLoading**.
 
-
 ## 💎 Custom style
 
 ![](https://gw.alicdn.com/tfs/TB1cZHVpcKfxu4jSZPfXXb3dXXa-750-468.gif)
 
-**FLoading** allows developers to freely define the global **Loading** style or the **Loading** style for a single impression.
+**FLoading** allows developers to freely define the global **Loading** style or the **Loading**
+style for a single impression.
 
 ### Custom global style
 
@@ -193,7 +193,6 @@ dependencies:
 
 > ⚠️ Attention，please refer to [**FLoading**] (https://github.com/Fliggy-Mobile/floading) official project for branch number or tag.
 
-
 # 💡 License
 
 ```
@@ -213,9 +212,7 @@ limitations under the License.
 
 ```
 
-
 ### Like it? Please cast your [**Star**](https://github.com/Fliggy-Mobile/floading) 🥰 ！
-
 
 ---
 

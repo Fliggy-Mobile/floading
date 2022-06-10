@@ -1,11 +1,11 @@
 name: floading
 description: Help developers create and use Loading in the most convenient way.
-version: 1.0.2
+version: 2.0.0
 author: Changyi<fupeng.fp@alibaba-inc.com>
 homepage: https://github.com/Fliggy-Mobile/floading
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:

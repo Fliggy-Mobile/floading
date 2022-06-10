@@ -8,11 +8,11 @@ import 'package:flutter/material.dart';
 /// It is convenient to create loading, support setting global style, and also support setting single style. Can disappear automatically.
 class FLoading {
   static bool _isShow = false;
-  static BuildContext _cacheContext;
-  static Widget _loading;
-  static Color _backgroundColor;
+  static BuildContext? _cacheContext;
+  static Widget? _loading;
+  static Color? _backgroundColor;
 
-  static Timer _timer;
+  static Timer? _timer;
 
   /// 是否正在显示 loading
   ///
@@ -24,7 +24,7 @@ class FLoading {
   /// 初始化默认的 loading 视图
   ///
   /// Initialize the default loading view
-  static init(Widget widget, {Color backgroundColor}) {
+  static init(Widget widget, {Color? backgroundColor}) {
     _loading = widget;
     if (backgroundColor != null) {
       _backgroundColor = backgroundColor;
@@ -43,7 +43,7 @@ class FLoading {
   /// [color]-background color when loading, default is [Colors.black54]
   /// [closable]-Is it possible to close loading via the back button
   static show(BuildContext context,
-      {Widget loading, int duration, Color color, bool closable = false}) {
+      {Widget? loading, int? duration, Color? color, bool closable = false}) {
     if (!_isShow) {
       _isShow = true;
       showGeneralDialog(
@@ -71,7 +71,7 @@ class FLoading {
         barrierDismissible: false,
         barrierLabel:
             MaterialLocalizations.of(context).modalBarrierDismissLabel,
-        barrierColor: color ?? _backgroundColor,
+        barrierColor: (color ?? _backgroundColor ?? Colors.black38),
         transitionDuration: const Duration(milliseconds: 150),
         transitionBuilder: (BuildContext context, Animation<double> animation,
             Animation<double> secondaryAnimation, Widget child) {
@@ -99,7 +99,7 @@ class FLoading {
   ///
   /// Hide loading
   /// [context] Sometimes, developers may need to pass in the current [context] by themselves.
-  static hide({BuildContext context}) {
+  static hide({BuildContext? context}) {
     _timer?.cancel();
     _timer = null;
     if(context != null){
@@ -107,7 +107,7 @@ class FLoading {
     }
     if (_isShow && _cacheContext != null) {
       _isShow = false;
-      Navigator.pop(_cacheContext);
+      Navigator.pop(_cacheContext!);
       _cacheContext = null;
     }
   }
